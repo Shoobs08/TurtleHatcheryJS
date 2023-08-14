@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="international-telephone-input.css">
+    <style>
+      body {
+          background-image:url(Images/Ocean.jpg);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+      }
+  </style>
+    <title>Tickets Page</title>
+</head>
+<body>
+    <header>
+        <button><a href="index.html">Home</a></button>
+        <h1 class="heading">Buy Tickets</h1>
+        <div></div> 
+    </header>
+    <nav>
+        <a href="tickets.html" class="button">Tickets</a>
+        <a href="details.html" class="button">Details</a>
+        <a href="payment.html" class="button">Payment</a>
+        <a href="confirmation.html" class="button">Confirmation</a>
+    </nav><br>
+
+    <h2>Enter your details</h2>
+
+    <form id="myForm">
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" required>
+        
+        <label for="mobileNumber">Mobile Number *</label>
+        <div class="iti">
+        <input type="tel" id="mobileNumber" required>
+        </div>
+        
+        <label for="email">Email *</label>
+        <input type="text" id="email" required>
+        
+        <label for="confirmEmail">Confirm Email *</label>
+        <input type="text" id="confirmEmail" required>
+        
+        <label for="gender">Gender</label>
+        <select id="gender">
+          <option value="blank"></option>  
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        
+        <input type="submit" value="Submit">
+      </form>
+
+      <script>
+        const form = document.getElementById("myForm");
+      
+        form.addEventListener("submit", function(event) {
+          event.preventDefault();
+      
+          const fullName = document.getElementById("fullName").value;
+          const mobileNumber = document.getElementById("mobileNumber").value;
+          const email = document.getElementById("email").value;
+          const confirmEmail = document.getElementById("confirmEmail").value;
+          const gender = document.getElementById("gender").value;
+      
+          const formData = {
+            fullName,
+            mobileNumber,
+            email,
+            confirmEmail,
+            gender
+          };
+    
+          localStorage.setItem("formData", JSON.stringify(formData));
+          
+          alert("Form data has been saved!");
+    
+          form.reset();
+        });
+      </script>
+      <table id="summarytable">
+        <h5>Summary Table</h5>
+        <tr>
+          <th>Date</th>
+          <td id="date-placeholder">31-07-2023</td>
+        </tr>
+        <tr>
+          <th>Time</th>
+          <td id="time-placeholder">07:00 AM - 08:00 AM</td>
+        </tr>
+        <tr>
+          <th>Duration</th>
+          <td id="duration-placeholder">Duration	1 hrs ( 01 Normal : 00 Peak)</td>
+        </tr>
+        <tr>
+          <th>Tickets</th>
+          <td id="tickets-placeholder">4</td>
+        </tr>
+        <tr>
+          <th>SL Adult</th>
+          <td id="adult-price-placeholder">$4.00</td>
+        </tr>
+        <tr>
+          <th>SL Child</th>
+          <td id="child-price-placeholder">$2.00</td>
+        </tr>
+        <tr>
+          <th>Foreigner Adult</th>
+          <td id="foreigner-adult-price-placeholder">$10.00</td>
+        </tr>
+        <tr>
+          <th>Foreigner Child</th>
+          <td id="foreigner-child-price-placeholder">$5.00</td>
+        </tr>
+        <tr>
+          <th>Infant</th>
+          <td>$0.00</td>
+        </tr>  
+        <tr>
+          <th>Total Payable:</th>
+          <td id="total-payable-placeholder">$21.00</td>    
+        </tr>  
+    </table>
+
+    <a href="payment.html" class="button2">Continue with Purchase</a>
+    <script src="international-telephone-input.js"></script>
+
+    <div class="footer-bottom">
+      <p>copyright &copy;2023. Designed by Shauban Rushdi</p>
+  </div>
+</footer>  
+</body>
+</html>

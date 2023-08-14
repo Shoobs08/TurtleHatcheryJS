@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, iniatial-scale=1.0">
+        <title>Turtle Hatchery</title>
+        <link rel="stylesheet" href='styledonation.css'>
+        <style>
+            body {
+                background-image:url(Images/Turtle2.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+        </style>
+    </head>
+        <body>
+            <div class="header"><b>Sri Lanka Turtle Hatcheries</b></div>
+            <div class="navbar">
+            <ul>
+                <li><a href="index.html" class="button">Home</a></li>
+                <li><a href="TypesofTurtles.html" class="button">Types of Turtles</a></li>
+                <li><a href="HikkaduwaTurtleHatchery.html" class="button">Hikkaduwa Turtle Hatchery</a></li>
+                <li><a href="ThreatstoTurtles.html" class="button">Threats to Turtles</a></li>
+                <li>
+                <a href="Index.html" class="button">Other Hatcheries</a>
+                <ul class="dropdown">
+                <li><a href="Kosgoda.html">Kosgoda</a></li>
+                <li><a href="Bentota.html">Bentota</a></li>
+            </ul>
+                <li><a href="PurchaseandDonationPage.html" class="button">Purchase & Donations</a></li>
+                <li><a href="tickets.html" class="button">Tickets</a></li>
+            </div><br>
+        
+            <div class="donation-container">
+            
+                <div class="donation-box">
+                    <div class="title">Donation Form</div>
+                    
+                    <div class="fields">
+                        <input type="text" id="firstName" placeholder="First Name">
+                        <input type="text" id="lastName" placeholder="Last Name">
+                        <input type="text" id="email" placeholder="Email">
+                    </div>
+                    
+                    <div class="amount">
+                        <div class="button">Rs.500</div>
+                        <div class="button">Rs.1000</div>
+                        <div class="button">Rs.5000</div>
+                        <div class="button">Rs.<input type="text" class="set-amount" placeholder=""></div>
+                    </div>
+                    
+                    <div class="switch">
+                        <input type="radio" class="switch-input" name="view" value="One-Time" id="one-time" checked="">
+                        <label for="one-time" class="switch-label switch-label-off">One-Time</label>
+                        <input type="radio" class="switch-input" name="view" value="Monthly" id="monthly">
+                        <label for="monthly" class="switch-label switch-label-on">Monthly</label>
+                        <span class="switch-selection"></span>
+                    </div>
+                    
+                    <div class="confirm">
+                        
+                    </div>
+                    
+                    <div class="donate-button"><i class="fa fa-credit-card"></i>Donate Now</div>
+                </div>
+            </div>
+
+            <div class="Store">
+            <h2>Turtle Hatchery Store</h2>
+            </div>
+
+                <table style="width:75%">
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/Purchase1.jpg" title="Product1" alt="Purchase" height="200" width="250">
+                        <td>Rs.1400</td>
+                        <td><form action="/action_page.php">
+                            <label for="quantity">Qty</label>
+                            <input type="number" name="quantity" min="1" max="5">
+                          </form></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/Purchase2.jpg" title="Product2" alt="Purchase" height="200" width="250">
+                        <td>Rs.1000</td>
+                        <td><form action="/action_page.php">
+                            <label for="quantity">Qty</label>
+                            <input type="number" name="quantity" min="1" max="5">
+                          </form></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/Purchase3.jpg" title="Product3" alt="Purchase" height="200" width="250">
+                        <td>Rs.3000</td>
+                        <td><form action="/action_page.php">
+                            <label for="quantity">Qty</label>
+                            <input type="number" name="quantity" min="1" max="5">
+                          </form></td>
+                    </tr>
+                    <tr>
+                        <td><img src="Images/Purchase4.jpg" title="Product4" alt="Purchase" height="200" width="250">
+                        <td>Rs.800</td>
+                        <td><form action="/action_page.php">
+                            <label for="quantity">Qty</label>
+                            <input type="number" name="quantity" min="1" max="5">
+                          </form></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="submit" value="Purchase"></td>
+                    </tr>
+                </table><br><br><br><br><br>
+
+            <footer>
+                <div class="footer-bottom">
+                    <p>copyright &copy;2023. Designed by Shauban Rushdi</p>
+                </div>
+            </footer>              
+        
+        </body>
+
+</html>        

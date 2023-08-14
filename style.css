@@ -1,0 +1,295 @@
+.header {
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color:#22438c;
+    padding: 20px 25px;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+    
+.navbar {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar ul {
+    list-style: none;
+    background: #22438c;
+}
+
+.navbar ul li{
+    display: inline-block;
+    position: relative;
+}
+
+.navbar ul li a {
+    display:block;
+    padding: 20px 25px;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+.navbar ul li ul.dropdown{
+    width: 100%;
+    background: #22438c;
+    position:absolute;
+    z-index: 999;
+    display: none;
+}
+
+.navbar ul li a:hover {
+    background: #112c66;
+}
+
+.navbar ul li:hover ul.dropdown {
+    display: block;  
+}
+
+/*Above Header and Navbar*/
+
+body {
+    background-size:cover;
+    margin: 0;
+    padding: 0;
+}
+
+/*INDEX PAGE*/
+
+.p1 h1{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 65px;
+    font-family: sans-serif;
+    
+}
+
+.p1 p{
+    color: #FFF;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    border: 5px solid #FFF;
+    margin: auto;
+    width: 75%;
+    padding: 50px;
+    
+    
+}
+
+.Image2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-top: auto;
+    border: 5px solid #22438c;
+    border-radius: 10%;
+}
+
+.p2 h2 {
+    display:block;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 65px;
+    font-family: sans-serif;
+
+}
+
+.Lifecycle{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    border: 5px solid #22438c;
+    border-radius: 10%;
+}
+
+.cycleh1 {
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    margin: auto;
+    width: 75%;
+    padding: 35px;
+}
+
+.cycle {
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    margin: auto;
+    width: 75%;
+    padding: 0px;
+}   
+
+/*INDEX PAGE*/
+
+/*TypesofTurtles Page, Hikkaduwa Page and Threats to Turtles page*/
+
+.p5 h3,h1 {
+    display:block;
+    padding: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    color:  #FFF;
+    font-size: 40px;
+    font-family: sans-serif;
+    text-align: center;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-bottom: 10px;
+}
+
+.wrapper * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.wrapper {
+    margin: 100px auto;
+    width: 70%;
+
+}    
+
+.wrapper img {
+    max-width:  320px;
+    float: left;
+    border: 3px solid #FFF;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.text-box {
+    color: #FFF
+}
+.text-box h4,h5,h6,h7,h8,h9,h10,h11,h12 {
+    font-size: 50px;
+
+}
+.text-box p {
+    font-size: 25px;
+}
+
+.Maps iframe{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+table{
+    width: 1000px;
+    border: 1px solid black;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightcyan;
+}
+
+table td{
+    padding: 10px;
+    border: 5px solid black;
+}
+
+/*TypesofTurtles Page, Hikkaduwa Page and Threats to Turtles Page*/
+
+/*FOOTER BELOW*/
+footer{
+    position: absolute;
+    background-color: #22438c;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #FFF;
+}
+
+.footer-bottom p{
+    font-size: 25px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+/*media querry below*/
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+    
+  }

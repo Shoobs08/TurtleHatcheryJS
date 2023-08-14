@@ -1,0 +1,168 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #22438c;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+nav {
+    background-color: #22438c;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+nav a {
+    text-decoration: none;
+    color: #FFF;
+    margin: 0 1rem;
+    font-size: 25px;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.ticket {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.heading {
+    text-align: center;
+}
+.purchase-button {
+    display: block;
+    margin: 2rem auto;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
+}
+#summarytable{
+   
+    margin-top:50px; 
+    width:50%; 
+    border-collapse:collapse; 
+    border-color:rgb(58, 39, 196);
+    border-collapse: collapse;
+    width:50%;
+    caption-side:top; 
+    font-size:22px; 
+    margin-bottom: 11%;
+    margin-left: 23%;
+    
+}
+h5{
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center
+}
+h2{
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center
+}
+p1{
+    margin-bottom: 20px;
+    margin-left: 150px;  
+    
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center
+}
+footer{
+    position: absolute;
+    background-color: #22438c;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #FFF;
+}
+
+.footer-bottom p{
+    font-size: 25px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    color: #FFF;
+}
+
+/*media querry below*/
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+    /* CSS */
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+    
+  }

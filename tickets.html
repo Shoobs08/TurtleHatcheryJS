@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tickets.css">
+    <style>
+        body {
+            background-image:url(Images/Ocean.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
+    <title>Tickets Page</title>
+</head>
+<body>
+    <header>
+        <button><a href="index.html">Home</a></button>
+        <h1 class="heading">Buy Tickets</h1>
+        <div></div>
+    </header>
+    <nav>
+        <a href="tickets.html" class="button">Tickets</a>
+        <a href="details.html" class="button">Details</a>
+        <a href="payment.html" class="button">Payment</a>
+        <a href="confirmation.html" class="button">Confirmation</a>
+    </nav>
+    <div class="container2">
+        <h2>Select a Date for Your Visit</h2>
+        <input type="date" id="visitDate">
+        <button id="saveDate">Save Date</button>
+    </div>
+    <script>
+        const visitDateInput = document.getElementById('visitDate');
+        const saveDateButton = document.getElementById('saveDate');
+
+        const savedDate = localStorage.getItem('selectedDate');
+        if (savedDate) {
+            visitDateInput.value = savedDate;
+        }
+        saveDateButton.addEventListener('click', () => {
+            if (visitDateInput.value) {
+                localStorage.setItem('selectedDate', visitDateInput.value);
+                alert('Date saved successfully!');
+            } else {
+                alert('Please select a date.');
+            }
+        });
+        const today = new Date().toISOString().split('T')[0];
+        visitDateInput.setAttribute('min', today);
+    </script>
+    <div class="container3">
+        <h2>Select Tickets</h2>
+        <div class="ticket-category">
+            <label for="slAdult">SL Adult:</label>
+            <input type="number" id="slAdult" min="0" value="0">
+        </div>
+        <div class="ticket-category">
+            <label for="slChild">SL Child:</label>
+            <input type="number" id="slChild" min="0" value="0">
+        </div>
+        <div class="ticket-category">
+            <label for="foreignerAdult">Foreigner Adult:</label>
+            <input type="number" id="foreignerAdult" min="0" value="0">
+        </div>
+        <div class="ticket-category">
+            <label for="foreignerChild">Foreigner Child:</label>
+            <input type="number" id="foreignerChild" min="0" value="0">
+        </div>
+        <div class="ticket-category">
+            <label for="infant">Infant:</label>
+            <input type="number" id="infant" min="0" value="0">
+        </div>
+        <button id="saveButton">Save</button>
+        <button id="loadButton">Load</button>
+    </div>
+    <script>
+        const ticketInputs = document.querySelectorAll('input[type="number"]');
+        const saveButton = document.getElementById('saveButton');
+        const loadButton = document.getElementById('loadButton');
+
+        function loadTickets() {
+            ticketInputs.forEach(input => {
+                const inputId = input.id;
+                const savedQuantity = localStorage.getItem(inputId);
+                if (savedQuantity !== null) {
+                    input.value = savedQuantity;
+                }
+            });
+        }
+
+        function saveTickets() {
+            ticketInputs.forEach(input => {
+                const inputId = input.id;
+                const quantity = input.value;
+                localStorage.setItem(inputId, quantity);
+            });
+            alert('Ticket quantities saved.');
+        }
+
+        loadButton.addEventListener('click', loadTickets);
+        saveButton.addEventListener('click', saveTickets);
+
+        loadTickets();
+    </script>
+    <div class="container4">
+        <h2>Select Time Slot</h2>
+        <label for="timeSlot">Select Time Slot:</label>
+        <select id="timeSlot">
+            <option value="0">Select</option>
+        </select>
+        <h2>Pricing Information</h2>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Pricing (USD)</th>
+            </tr>
+            <tr>
+                <td>Foreigner Adult</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Foreigner Child</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>SL Adult</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>SL Child</td>
+                <td>2</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        const timeSlotSelect = document.getElementById('timeSlot');
+        
+        const pricingTable = {
+            'Foreigner Adult': { normal: 10, peak: 13 },
+            'Foreigner Child': { normal: 5, peak: 8 },
+            'SL Adult': { normal: 4, peak: 6 },
+            'SL Child': { normal: 2, peak: 3 }
+        };
+        
+        for (let hour = 7; hour <= 18; hour++) {
+            for (let minute = 0; minute <= 59; minute += 60) {
+                const timeLabel = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+                timeSlotSelect.innerHTML += `<option value="${timeLabel}">${timeLabel}</option>`;
+            }
+        }
+    
+        timeSlotSelect.addEventListener('change', () => {
+            const selectedTime = timeSlotSelect.value;
+            if (selectedTime !== '0') {
+                const currentTime = parseInt(selectedTime.slice(0, 2));
+                const selectedCategory = 'Foreigner Adult';
+                if (pricingTable[selectedCategory]) {
+                    const pricing = pricingTable[selectedCategory];
+                    const hourCharge = (currentTime >= 10 && currentTime <= 13) ? pricing.peak : pricing.normal;
+                    alert(`Pricing: $${hourCharge}`);
+                } else {
+                    alert('Invalid time slot.');
+                }
+            }
+        });
+    </script><br><br>
+    <table id="summarytable">
+        <h5>Summary Table</h5>
+        <tr>
+          <th>Date</th>
+          <td id="date-placeholder">31-07-2023</td>
+        </tr>
+        <tr>
+          <th>Time</th>
+          <td id="time-placeholder">07:00 AM - 08:00 AM</td>
+        </tr>
+        <tr>
+          <th>Duration</th>
+          <td id="duration-placeholder">Duration	1 hrs ( 01 Normal : 00 Peak)</td>
+        </tr>
+        <tr>
+          <th>Tickets</th>
+          <td id="tickets-placeholder">4</td>
+        </tr>
+        <tr>
+          <th>SL Adult</th>
+          <td id="adult-price-placeholder">$4.00</td>
+        </tr>
+        <tr>
+          <th>SL Child</th>
+          <td id="child-price-placeholder">$2.00</td>
+        </tr>
+        <tr>
+          <th>Foreigner Adult</th>
+          <td id="foreigner-adult-price-placeholder">$10.00</td>
+        </tr>
+        <tr>
+          <th>Foreigner Child</th>
+          <td id="foreigner-child-price-placeholder">$5.00</td>
+        </tr>
+        <tr>
+          <th>Infant</th>
+          <td>$0.00</td>
+        </tr>  
+        <tr>
+          <th>Total Payable:</th>
+          <td id="total-payable-placeholder">$21.00</td>    
+        </tr>  
+    </table>
+    
+    <a href="details.html" class="button2">Continue with Purchase</a>
+
+<script src="tickets.js"></script>  
+
+<div class="footer-bottom">
+    <p>copyright &copy;2023. Designed by Shauban Rushdi</p>
+</div>
+</footer>  
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <style>
+      body {
+          background-image:url(Images/Ocean.jpg);
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+      }
+  </style>
+    <title>Tickets Page</title>
+</head>
+<body>
+    <header>
+        <button><a href="index.html">Home</a></button>
+        <h1 class="heading">Buy Tickets</h1>
+        <div></div> 
+    </header>
+    <nav>
+        <a href="tickets.html" class="button">Tickets</a>
+        <a href="details.html" class="button">Details</a>
+        <a href="payment.html" class="button">Payment</a>
+        <a href="confirmation.html" class="button">Confirmation</a>
+    </nav><br>
+    <body>
+        <div class="container">
+          <h1>Payment Details</h1>
+          <form id="payment-form">
+            <label for="card-number">Card Number</label>
+            <input type="number" id="card-number" name="card-number" placeholder="Card Number" required>
+            
+            <label for="expiry-date">Expiry Date</label>
+            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YYYY" required>
+            
+            <label for="cvc">CVC / CVV</label>
+            <input type="number" id="cvc" name="cvc" placeholder="CVC / CVV" required>
+            
+            <label for="name-on-card">Name on Card</label>
+            <input type="text" id="name-on-card" name="name-on-card" placeholder="Name on Card" required>
+            
+            <button type="submit" class="btn-pay">Pay</button>
+          </form>
+        </div>
+
+        <table id="summarytable">
+            <h5>Summary Table</h5>
+            <tr>
+                <th>Name</th>
+                <td id="name-placeholder"></td>
+            </tr>
+            <tr>
+              <th>Date</th>
+              <td id="date-placeholder">31-07-2023</td>
+            </tr>
+            <tr>
+              <th>Time</th>
+              <td id="time-placeholder">07:00 AM - 08:00 AM</td>
+            </tr>
+            <tr>
+              <th>Duration</th>
+              <td id="duration-placeholder">Duration	1 hrs ( 01 Normal : 00 Peak)</td>
+            </tr>
+            <tr>
+                <th>Mobile</th>
+                <td id="mobile-placeholder"></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td id="email-placeholder"></td>
+            </tr>
+            <tr>
+              <th>Tickets</th>
+              <td id="tickets-placeholder">4</td>
+            </tr>
+            <tr>
+              <th>SL Adult</th>
+              <td id="adult-price-placeholder">$4.00</td>
+            </tr>
+            <tr>
+              <th>SL Child</th>
+              <td id="child-price-placeholder">$2.00</td>
+            </tr>
+            <tr>
+              <th>Foreigner Adult</th>
+              <td id="foreigner-adult-price-placeholder">$10.00</td>
+            </tr>
+            <tr>
+              <th>Foreigner Child</th>
+              <td id="foreigner-child-price-placeholder">$5.00</td>
+            </tr>
+            <tr>
+              <th>Infant</th>
+              <td>$0.00</td>
+            </tr>  
+            <tr>
+              <th>Total Payable:</th>
+              <td id="total-payable-placeholder">$21.00</td>    
+            </tr>  
+        </table>
+
+        <a href="confirmation.html" class="button2">Continue with Purchase</a>
+
+        <div class="footer-bottom">
+          <p>copyright &copy;2023. Designed by Shauban Rushdi</p>
+      </div>
+  </footer>  
+</body>
+</html>
